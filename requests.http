@@ -1,0 +1,91 @@
+
+###
+POST http://localhost:3000/announcements
+Content-Type: application/json
+
+{
+  "title": "Практика з приготування піци",
+  "description": "Запрошую всіх бажаючих на майстер-клас з приготування піци! Навчимося готувати тісто, вибирати інгредієнти та створювати смачні комбінації. Чекаю на вас у суботу о 15:00 в моїй кухні. Вартість участі - 5000 грн. Не пропустіть можливість покращити свої кулінарні навички та насолодитися смачною піцою разом зі мною!",
+  "price": 5000,
+  "category": "service",
+  "contactInfo": "0956631184"
+}
+
+###
+
+###
+POST http://localhost:3000/announcements
+Content-Type: application/json
+
+{
+  "title": "Робота кур'єром",
+  "description": "Шукаю кур'єра для доставки товарів у місті. Вимоги: відповідальність, пунктуальність, наявність власного транспорту буде перевагою. Графік роботи гнучкий, можливість працювати як повний день, так і неповний. Зарплата обговорюється індивідуально в залежності від обсягу роботи та досвіду. Якщо ви зацікавлені, будь ласка, зв'яжіться зі мною за номером 0976731529 для отримання додаткової інформації та обговорення деталей співпраці.",
+  "price":35000,
+  "category": "job",
+  "contactInfo": "0956631184"
+}
+
+###
+
+###
+GET http://localhost:3000/announcements
+###
+
+###
+GET http://localhost:3000/announcements?search=кур'єр
+###
+
+###
+POST http://localhost:3000/announcements
+Content-Type: application/json
+
+{
+  "title": ".уцащцпхщцп",
+  "description": "None",
+  "price": -1000,
+  "category": "unknown",
+  "contactInfo": "+mal"
+}
+
+###
+
+###
+GET http://localhost:3000/announcements?sort=newest&page=1
+###
+
+###
+GET http://localhost:3000/announcements/1
+###
+
+###
+GET http://localhost:3000/announcements/10
+###
+
+###
+PATCH http://localhost:3000/announcements/1
+Content-Type: application/json
+
+{
+  "price": 4000
+}
+
+###
+
+###
+PATCH http://localhost:3000/announcements/10
+Content-Type: application/json
+
+{
+  "price": 30000
+}
+
+###
+
+###
+DELETE http://localhost:3000/announcements/1
+
+###
+
+###
+DELETE http://localhost:3000/announcements/99999
+###
